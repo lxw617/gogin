@@ -1,8 +1,6 @@
 package common
 
-import (
-	"encoding/json"
-)
+import "encoding/json"
 
 type Result struct {
 	Code int         `json:"code"` // 错误码

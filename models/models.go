@@ -17,7 +17,6 @@ type Model struct {
 	ID        int       `gorm:"primary_key" json:"id"`
 	CreatedAt time.Time `json:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"`
-	DeletedAt time.Time `json:"deletedAt"`
 }
 
 func init() {
@@ -57,6 +56,8 @@ func init() {
 		return tablePrefix + defaultTableName
 	}
 
+	//打印执行sql
+	DB.LogMode(true)
 	DB.SingularTable(true)
 
 	//GORM 使用 database/sql 维护连接池

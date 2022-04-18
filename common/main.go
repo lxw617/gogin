@@ -16,8 +16,11 @@ var (
 	Err = response(500, "error") // 通用错误
 
 	// 服务级错误码
-	ErrParam     = response(10001, "参数有误")
-	ErrSignParam = response(10002, "签名参数有误")
+	ErrParam                 = response(10001, "参数有误")
+	ErrSignParam             = response(10002, "签名参数有误")
+	ErrAuthToken             = response(10003, "Token生成失败")
+	ErrAuthCheckTokenFail    = response(10003, "Token鉴权失败")
+	ErrAuthCheckTokenTimeOut = response(10003, "Token鉴权超时")
 
 	// 模块级错误码 - 用户模块
 	ErrUserService = response(20100, "用户服务异常")
