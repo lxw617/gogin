@@ -16,7 +16,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/v1/tag/tag": {
+        "/api/v1/tag/addTag": {
             "post": {
                 "produces": [
                     "application/json"
@@ -77,7 +77,93 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v1/tag/tags": {
+        "/api/v1/tag/delTag/{id}": {
+            "delete": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Delete article tag",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/tag/getTag/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Delete article tag",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/tag/getTags": {
             "get": {
                 "produces": [
                     "application/json"
@@ -125,16 +211,77 @@ const docTemplate = `{
                 }
             }
         },
-        "/auth": {
-            "get": {
-                "security": [
-                    {
-                        "ApiKeyAuth": []
-                    }
-                ],
-                "consumes": [
+        "/api/v1/tag/updateTag/{id}": {
+            "put": {
+                "produces": [
                     "application/json"
                 ],
+                "summary": "Update article tag",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Name",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "State",
+                        "name": "state",
+                        "in": "body",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "description": "ModifiedBy",
+                        "name": "modified_by",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth": {
+            "get": {
                 "produces": [
                     "application/json"
                 ],
@@ -151,12 +298,6 @@ const docTemplate = `{
                         "description": "password",
                         "name": "password",
                         "in": "query"
-                    },
-                    {
-                        "type": "string",
-                        "description": "Bearer 用户令牌",
-                        "name": "Authorization",
-                        "in": "header"
                     }
                 ],
                 "responses": {

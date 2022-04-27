@@ -29,7 +29,6 @@ func main() {
 		    }
 		}
 	*/
-	//AddFunc 会向 Cron job runner 添加一个 func ，以按给定的时间表运行
 	c.AddFunc("* * * * * *", func() {
 		log.Println("Run models.CleanAllTag...")
 	})
@@ -37,7 +36,8 @@ func main() {
 		log.Println("Run models.CleanAllArticle...")
 	})
 	/*
-				func (c *Cron) AddJob(spec string, cmd Job) error {
+		AddFunc 会向 Cron job runner 添加一个 func ，以按给定的时间表运行
+		func (c *Cron) AddJob(spec string, cmd Job) error {
 				    schedule, err := Parse(spec)
 				    if err != nil {
 				        return err

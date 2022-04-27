@@ -1,7 +1,7 @@
 info:
   contact: {}
 paths:
-  /api/v1/tag/tag:
+  /api/v1/tag/addTag:
     post:
       parameters:
       - description: Name
@@ -40,7 +40,63 @@ paths:
               type: array
             type: object
       summary: Add article tag
-  /api/v1/tag/tags:
+  /api/v1/tag/delTag/{id}:
+    delete:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+      summary: Delete article tag
+  /api/v1/tag/getTag/{id}:
+    get:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+      summary: Delete article tag
+  /api/v1/tag/getTags:
     get:
       parameters:
       - description: Name
@@ -71,10 +127,53 @@ paths:
               type: array
             type: object
       summary: Get multiple article tags
+  /api/v1/tag/updateTag/{id}:
+    put:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Name
+        in: body
+        name: name
+        required: true
+        schema:
+          type: string
+      - description: State
+        in: body
+        name: state
+        schema:
+          type: integer
+      - description: ModifiedBy
+        in: body
+        name: modified_by
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+      summary: Update article tag
   /auth:
     get:
-      consumes:
-      - application/json
       parameters:
       - description: username
         in: query
@@ -83,10 +182,6 @@ paths:
       - description: password
         in: query
         name: password
-        type: string
-      - description: Bearer 用户令牌
-        in: header
-        name: Authorization
         type: string
       produces:
       - application/json
@@ -107,7 +202,5 @@ paths:
                 type: string
               type: array
             type: object
-      security:
-      - ApiKeyAuth: []
       summary: Get authToken
 swagger: "2.0"

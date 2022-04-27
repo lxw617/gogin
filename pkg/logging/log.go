@@ -29,22 +29,46 @@ const (
 	FATAL
 )
 
-func init() {
+func Setup() {
+	var err error
+	filePath := getLogFilePath()
+	fileName := getLogFileName()
+	//open file
+	F, err = openLogFile(fileName, filePath)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	logger = log.New(F, DefaultPrefix, log.LstdFlags)
+}
+
+/*func Setup() {
 	filePath := getLogFileFullPath()
 	F = openLogFile(filePath) //E:\jianyu\gogin\runtime\logs
 	//log.New：创建一个新的日志记录器。out定义要写入日志数据的IO句柄。prefix定义每个生成的日志行的开头。flag定义了日志记录属性
+	//log.New接受三个参数：
+	//io.Writer：日志都会写到这个Writer中；可以使用io.MultiWriter实现多目的地输出
+	//prefix：前缀，也可以后面调用logger.SetPrefix设置；
+	//flag：选项，也可以后面调用logger.SetFlag设置。
+	//上面代码将日志输出到一个bytes.Buffer，然后将这个buf打印到标准输出。
+
 	logger = log.New(F, DefaultPrefix, log.LstdFlags)
 	//log.LstdFlags：日志记录的格式属性之一，其余的选项如下
-	/*const (
-		Ldate         = 1 << iota     // the date in the local time zone: 2009/01/23
-		Ltime                         // the time in the local time zone: 01:23:23
-		Lmicroseconds                 // microsecond resolution: 01:23:23.123123.  assumes Ltime.
-		Llongfile                     // full file name and line number: /a/b/c/d.go:23
-		Lshortfile                    // final file name element and line number: d.go:23. overrides Llongfile
-		LUTC                          // if Ldate or Ltime is set, use UTC rather than the local time zone
-		LstdFlags     = Ldate | Ltime // initial values for the standard logger
-	)*/
-}
+	//const (
+	//	Ldate         = 1 << iota     // the date in the local time zone: 2009/01/23
+	//	Ltime                         // the time in the local time zone: 01:23:23
+	//	Lmicroseconds                 // microsecond resolution: 01:23:23.123123.  assumes Ltime.
+	//	Llongfile                     // full file name and line number: /a/b/c/d.go:23
+	//	Lshortfile                    // final file name element and line number: d.go:23. overrides Llongfile
+	//	LUTC                          // if Ldate or Ltime is set, use UTC rather than the local time zone
+	//	LstdFlags     = Ldate | Ltime // initial values for the standard logger
+	//	Ldate：输出当地时区的日期，如2020/02/07；
+	//	Ltime：输出当地时区的时间，如11:45:45；
+	//	Lmicroseconds：输出的时间精确到微秒，设置了该选项就不用设置Ltime了。如11:45:45.123123；
+	//	Llongfile：输出长文件名+行号，含包名，如github.com/darjun/go-daily-lib/log/flag/main.go:50；
+	//	Lshortfile：输出短文件名+行号，不含包名，如main.go:50；
+	//	LUTC：如果设置了Ldate或Ltime，将输出 UTC 时间，而非当地时区。
+	//)
+}*/
 
 func Debug(v ...interface{}) {
 	setPrefix(DEBUG)

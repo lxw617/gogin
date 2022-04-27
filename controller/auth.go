@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	result "gogin/common"
+	"gogin/pkg/logging"
 	"gogin/pkg/util"
 	"gogin/service"
 	"net/http"
@@ -33,8 +34,7 @@ func GetToken(c *gin.Context) {
 			token, err := util.GenerateToken(username, password)
 			token = "Bearer " + token
 			if err != nil {
-				c.JSON(http.StatusOK, result.ErrAuthToken)
-				return
+				logging.Info(err)
 			}
 			c.JSON(http.StatusOK, result.OK.WithData(token))
 		}

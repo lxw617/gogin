@@ -8,7 +8,7 @@ import (
 
 //设置本地密钥
 
-var jwtSecret = []byte(setting.JwtSecret)
+var jwtSecret = []byte(setting.AppSetting.JwtSecret)
 
 // MyClaims 自定义声明结构体并内嵌jwt.StandardClaims
 // jwt包自带的jwt.StandardClaims只包含了官方字段

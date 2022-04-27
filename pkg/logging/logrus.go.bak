@@ -1,0 +1,177 @@
+package logging
+
+import (
+	"fmt"
+	"github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
+	"os"
+	"runtime/debug"
+	"strings"
+	"time"
+)
+
+var (
+	Logger *kLogger
+	logFile *os.File
+)
+type kLogger struct {
+	*logrus.Entry
+}
+
+func (kLogger *kLogger) Info(args ...interface{}) {
+	newLoggerWithFields(args...).Infoln()
+}
+func (kLogger *kLogger) Infoln(args ...interface{}) {
+	newLoggerWithFields(args...).Infoln()
+}
+func (kLogger *kLogger) Warning(args ...interface{}) {
+	newLoggerWithFields(args...).Warningln()
+}
+func (kLogger *kLogger) Warningln(args ...interface{}) {
+	newLoggerWithFields(args...).Warningln()
+}
+func (kLogger *kLogger) Error(args ...interface{}) {
+	newLoggerWithFields(args...).Errorln()
+}
+func (kLogger *kLogger) Errorln(args ...interface{}) {
+	newLoggerWithFields(args...).Errorln()
+}
+
+func newLoggerWithFields(args ...interface{}) *logrus.Entry {
+	// 拼接本项目方法调用链路
+	stack := fmt.Sprintf("%s", debug.Stack())
+	stackSlice := strings.Split(stack, "\n")
+	methodChain := ""
+	if len(stackSlice) >= 9 {
+		// 第9条记录为调用方法信息
+		methodChain = stackSlice[8]
+	}
+	arr := make([]string, 0)
+	for _, arg := range args {
+		arr = append(arr, fmt.Sprintf("%v", arg))
+	}
+	msg := strings.Join(arr, " ")
+	if len(msg) > 200 {
+		msg = msg[:200]
+	}
+	msg += fmt.Sprintf("(%s)", methodChain)
+	appName := viper.GetString("name")
+	return logrus.WithFields(logrus.Fields{
+		"@timestamp": time.Now().Format(time.RFC3339),
+		"@fields": map[string]interface{}{
+			"fromtype": appName,
+			"totype":   appName,
+			"other":    msg,
+		},
+	})
+}
+
+func Setup() {
+
+	isDevelopment := viper.GetBool("isDevelopment")
+
+	appName := viper.GetString("name")
+
+	if isDevelopment {
+		logrus.SetLevel(logrus.DebugLevel)
+		logrus.SetOutput(os.Stderr)
+		logrus.SetFormatter(&logrus.JSONFormatter{})
+	} else {
+		logFilePath := viper.GetString("server.log.path")
+		var err error
+		logFile, err = os.OpenFile(logFilePath, os.O_RDWR|os.O_APPEND|os.O_CREATE, os.ModePerm)
+		if err != nil {
+			logrus.Fatalf("open file error :%s \n", logFilePath)
+			TeardownLogger()
+		}
+		logrus.SetLevel(logrus.WarnLevel)
+		logrus.SetOutput(logFile)
+		logrus.SetFormatter(&logrus.JSONFormatter{})
+	}
+	
+	Logger = &kLogger{logrus.WithFields(logrus.Fields{
+		"@timestamp": time.Now().Format(time.RFC3339),
+		"@fields": map[string]interface{}{
+			"fromtype": appName,
+			"totype":   appName,
+		}})}
+}
+
+func TeardownLogger() {
+	logrus.Printf("logger file stream closed.")
+	logFile.Close()
+}
+
+/*func _Log(ctx gin.Context, result *Result) {
+	var processTime int64
+
+	startAt, _ := ctx.URLParamInt64("startAt")
+	if startAt != 0 {
+		endAt := time.Now().UnixNano() / 1000000
+		processTime = endAt - startAt
+	} else {
+		processTime = -1
+	}
+
+	body := ""
+
+	if ctx.Values().Get("isUpload") == nil {
+		if byt, err := ctx.GetBody(); err == nil {
+			body = string(byt[:])
+		}
+	}
+
+	alarmID := "0"
+	appName := viper.GetString("name")
+
+	_interface := functions.ExtractHandlerName(ctx.HandlerName())
+	if result.Code != strconv.Itoa((int)(biz_status.StatusOK)) {
+		_interface = "error:" + _interface
+		alarmID = "1"
+	}
+
+	userId, err := Session.GetUserID(ctx)
+	if err != nil {
+		userId = -1
+	}
+
+	Logger := logrus.WithFields(logrus.Fields{
+		"@source":    GetIP(ctx),
+		"@timestamp": time.Now().Format(time.RFC3339),
+		"@fields": map[string]interface{}{
+			"userId":      userId,
+			"fromtype":    appName,
+			"host":        ctx.Host(),
+			"interface":   _interface,
+			"method":      ctx.Method(),
+			"ip":          ctx.RemoteAddr(),
+			"query":       ctx.URLParams(),
+			"param":       ctx.Params(),
+			"body":        body,
+			"alarmID":     alarmID,
+			"path":        ctx.Path(),
+			"processTime": processTime,
+			"result":      result,
+			"msg":         result.Msg,
+			"desc":        result.Description,
+			"data":        result.Data,
+			"status":      result.Status,
+			"code":        result.Code,
+			"subCode":     result.SubCode,
+			"exception":   result.Exception,
+			"appCode":     fmt.Sprintf("%s:%s", appName, result.Code),
+			"system":      appName,
+			"totype":      appName,
+		},
+	})
+	Logger.Warningln(result.Code)
+}
+
+var (
+	logFile *os.File
+	Log     = func(ctx gin.Context, data interface{}) {
+		_result := NewResult(data)
+		_Log(ctx, _result)
+	}
+)
+*/

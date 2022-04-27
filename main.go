@@ -1,48 +1,52 @@
 package main
 
 import (
-	"context"
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"gogin/models"
+	"gogin/pkg/logging"
 	"gogin/pkg/setting"
 	"gogin/routers"
 	"log"
 	"net/http"
-	"os"
-	"os/signal"
-	"time"
 )
 
+func init() {
+	/*
+		配置统管
+		在 Go 中，当存在多个 init 函数时，执行顺序为：
+		相同包下的 init 函数：按照源文件编译顺序决定执行顺序（默认按文件名排序）
+		不同包下的 init 函数：按照包导入的依赖关系决定先后顺序
+		所以要避免多 init 的情况，尽量由程序把控初始化的先后顺序
+	*/
+	setting.Setup()
+	//连接数据库
+	models.Setup()
+	//日志
+	logging.Setup()
+	//gredis.Setup()
+	//util.Setup()
+}
+
 func main() {
-	//gin.Default()返回Gin的type Engine struct{...}，里面包含RouterGroup，相当于创建一个路由Handlers，可以后期绑定各类的路由规则和函数、中间件等
-	//router := gin.Default()
-	router := routers.InitRouter()
 
-	//默认情况下，它在 :8080 上提供服务，除非 PORT 环境变量已定义。
-	s := &http.Server{
-		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
-		Handler:        router,
-		ReadTimeout:    setting.ReadTimeout,
-		WriteTimeout:   setting.WriteTimeout,
-		MaxHeaderBytes: 1 << 20,
+	gin.SetMode(setting.ServerSetting.RunMode)
+
+	routersInit := routers.InitRouter()
+	readTimeout := setting.ServerSetting.ReadTimeout
+	writeTimeout := setting.ServerSetting.WriteTimeout
+	endPoint := fmt.Sprintf(":%d", setting.ServerSetting.HttpPort)
+	maxHeaderBytes := 1 << 20
+
+	server := &http.Server{
+		Addr:           endPoint,
+		Handler:        routersInit,
+		ReadTimeout:    readTimeout,
+		WriteTimeout:   writeTimeout,
+		MaxHeaderBytes: maxHeaderBytes,
 	}
 
-	go func() {
-		if err := s.ListenAndServe(); err != nil {
-			log.Printf("Listen: %s\n", err)
-		}
-	}()
+	log.Printf("[info] start http server listening %s", endPoint)
 
-	quit := make(chan os.Signal)
-	signal.Notify(quit, os.Interrupt)
-	<-quit
-
-	log.Println("Shutdown Server ...")
-
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-	if err := s.Shutdown(ctx); err != nil {
-		log.Fatal("Server Shutdown:", err)
-	}
-
-	log.Println("Server exiting")
+	server.ListenAndServe()
 }
