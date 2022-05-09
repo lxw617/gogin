@@ -1,17 +1,21 @@
 package controller
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
+	"github.com/gomodule/redigo/redis"
 	"github.com/unknwon/com"
 	result "gogin/common"
 	"gogin/models"
 	"gogin/pkg/logging"
+	gredis "gogin/pkg/redis"
 	"gogin/pkg/setting"
 	"gogin/pkg/util"
-	"gogin/service"
+	service2 "gogin/routers/api/v1/service"
 	"net/http"
+	"reflect"
 )
 
 /*注解	描述
@@ -49,7 +53,9 @@ func GetTags(c *gin.Context) { //c *gin.Context是Gin很重要的组成部分，
 	}*/
 	params["state"] = state
 	//获取结果
-	tags, count, err := service.GetTags(params, util.GetPage(c), setting.AppSetting.PageSize) //util.GetPage保证了各接口的page处理是一致的
+	tags, count, err := service2.GetTags(params, util.GetPage(c), setting.AppSetting.PageSize) //util.GetPage保证了各接口的page处理是一致的
+	//将结果使用 hset 格式存入redis缓存中
+	//redis.HSet()
 	//在获取标签列表接口中，我们可以根据name、state、page来筛选查询条件，分页的步长可通过app.ini进行配置，以lists、total的组合返回达到分页效果
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, result.Err)
@@ -104,7 +110,7 @@ func AddTag(c *gin.Context) {
 	valid.Required(tag.CreatedBy, "createdBy").Message("创建人不能为空")
 	if !valid.HasErrors() {
 		//调用方法
-		tag, err := service.AddTag(tag)
+		tag, err := service2.AddTag(tag)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, result.Err)
 		}
@@ -129,12 +135,12 @@ func RemoveTag(c *gin.Context) {
 	valid := validation.Validation{}
 	valid.Min(tagId, 1, "id").Message("ID必须大于0")
 	//判断是否存在
-	if _, err := service.GetTagById(tagId); err != nil {
+	if _, err := service2.GetTagById(tagId); err != nil {
 		c.JSON(http.StatusInternalServerError, result.Err)
 	}
 	if !valid.HasErrors() {
 		//删除文章标签
-		if err := service.DeleteById(tagId); err != nil {
+		if err := service2.DeleteById(tagId); err != nil {
 			c.JSON(http.StatusInternalServerError, result.Err)
 		}
 		c.JSON(http.StatusOK, result.OK.WithMsg("删除文章标签成功"))
@@ -158,12 +164,57 @@ func GetTagById(c *gin.Context) {
 	valid := validation.Validation{}
 	valid.Min(tagId, 1, "id").Message("ID必须大于0")
 	if !valid.HasErrors() {
-		//删除文章标签
-		tag, err := service.GetTagById(tagId)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, result.Err)
+		//获取连接池的一个连接
+		conn := gredis.RedisPool.Get()
+		//获取结果
+		res, err := conn.Do("HGET", "tagset", tagId)
+		tag := &models.Tag{}
+		rebytes, _ := redis.Bytes(conn.Do("HGET", "tagset", tagId))
+
+		//如果存入redis缓存中 string(tagJson)
+		//res, err = conn.Do("HSET", "tagset", tagId, string(tagJson))
+		//读取时应该使用以下方式
+		//reStr, _ := redis.String(conn.Do("HGET", "tagset", tagId))
+		//r := []byte(reStr)
+		//err = json.Unmarshal(r,tag)
+
+		//格式转换
+		json.Unmarshal(rebytes, tag)
+		//如果缓存中有
+		if res != nil {
+			fmt.Println("从缓存中获取")
+			if err != nil {
+				fmt.Println("redis HGET error:", err)
+			} else {
+				res_type := reflect.TypeOf(res)
+				fmt.Printf("res type : %s \n", res_type)
+				fmt.Printf("res  : %s \n", res)
+			}
+			c.JSON(http.StatusOK, result.OK.WithData(tag))
+		} else {
+			//没有查数据库
+			fmt.Println("从数据库中获取")
+			//从数据库根据id获取文章标签
+			tag, err := service2.GetTagById(tagId)
+			tagJson, err := json.Marshal(tag)
+			if err == nil {
+				fmt.Println(string(tagJson))
+			}
+			//存入redis缓存中
+			res, err = conn.Do("HSET", "tagset", tagId, tagJson) //string(tagJson)
+			if err != nil {
+				fmt.Println("redis mset error:", err)
+			}
+			if err != nil {
+				c.JSON(http.StatusInternalServerError, result.Err)
+			}
+			c.JSON(http.StatusOK, result.OK.WithData(tag))
 		}
-		c.JSON(http.StatusOK, result.OK.WithData(tag))
+
+		/*res, err = redis.String(conn.Do("HGET", "tagset", tagId))
+		if err != nil {
+			fmt.Println("redis HGET error:", err)
+		}*/
 	} else {
 		for _, err := range valid.Errors {
 			logging.Info(err.Key, err.Message)
@@ -188,7 +239,7 @@ func EditTag(c *gin.Context) {
 	createdBy := com.StrTo(c.Query("createdBy")).MustInt()
 	id := com.StrTo(c.Query("id")).MustInt()
 	//获取tag
-	tag, _ := service.GetTagById(id)
+	tag, _ := service2.GetTagById(id)
 	//参数校验
 	valid := validation.Validation{}
 	if name != "" {
@@ -209,7 +260,7 @@ func EditTag(c *gin.Context) {
 	}
 	if !valid.HasErrors() {
 		//调用方法
-		tag, err := service.UpdateTag(tag, id)
+		tag, err := service2.UpdateTag(tag, id)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, result.Err)
 		}
@@ -222,83 +273,3 @@ func EditTag(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, result.ErrParam)
 	}
 }
-
-/*
-返回结果：各种数据格式的响应
-json、结构体、XML、YAML类似于java的properties、ProtoBuf
-// 多种响应方式
-func main() {
-    // 1.创建路由
-    // 默认使用了2个中间件Logger(), Recovery()
-    r := gin.Default()
-    // 1.json
-    r.GET("/someJSON", func(c *gin.Context) {
-        c.JSON(200, gin.H{"message": "someJSON", "status": 200})
-    })
-    // 2. 结构体响应
-    r.GET("/someStruct", func(c *gin.Context) {
-        var msg struct {
-            Name    string
-            Message string
-            Number  int
-        }
-        msg.Name = "root"
-        msg.Message = "message"
-        msg.Number = 123
-        c.JSON(200, msg)
-    })
-    // 3.XML
-    r.GET("/someXML", func(c *gin.Context) {
-        c.XML(200, gin.H{"message": "abc"})
-    })
-    // 4.YAML响应
-    r.GET("/someYAML", func(c *gin.Context) {
-        c.YAML(200, gin.H{"name": "zhangsan"})
-    })
-    // 5.protobuf格式,谷歌开发的高效存储读取的工具
-    // 数组？切片？如果自己构建一个传输格式，应该是什么格式？
-    r.GET("/someProtoBuf", func(c *gin.Context) {
-        reps := []int64{int64(1), int64(2)}
-        // 定义数据
-        label := "label"
-        // 传protobuf格式数据
-        data := &protoexample.Test{
-            Label: &label,
-            Reps:  reps,
-        }
-        c.ProtoBuf(200, data)
-    })
-
-    r.Run(":8000")
-}
-
-*/
-/*
-Validator 是基于 tag（标记）实现结构体和单个字段的值验证库，它包含以下功能：
-
-使用验证 tag（标记）或自定义验证器进行跨字段和跨结构体验证。
-关于 slice、数组和 map，允许验证多维字段的任何或所有级别。
-能够深入 map 键和值进行验证。
-通过在验证之前确定接口的基础类型来处理类型接口。
-处理自定义字段类型（如 sql 驱动程序 Valuer）。
-别名验证标记，它允许将多个验证映射到单个标记，以便更轻松地定义结构体上的验证。
-提取自定义的字段名称，例如，可以指定在验证时提取 JSON 名称，并在生成的 FieldError 中使用该名称。
-可自定义 i18n 错误消息。
-Web 框架 gin 的默认验证器。
-
-变量验证
-Var 方法使用 tag（标记）验证方式验证单个变量。
-func (*validator.Validate).Var(field interface{}, tag string) error
-它接收一个 interface{} 空接口类型的 field 和一个 string 类型的 tag，返回传递的非法值得无效验证错误，否则将 nil 或 ValidationErrors 作为错误。如果错误不是 nil，则需要断言错误去访问错误数组，例如：
-validationErrors := err.(validator.ValidationErrors)
-如果是验证数组、slice 和 map，可能会包含多个错误。
-
-结构体验证
-结构体验证结构体公开的字段，并自动验证嵌套结构体，除非另有说明。
-func (*validator.Validate).Struct(s interface{}) error
-它接收一个 interface{} 空接口类型的 s，返回传递的非法值得无效验证错误，否则将 nil 或 ValidationErrors 作为错误。如果错误不是 nil，则需要断言错误去访问错误数组，例如：
-validationErrors := err.(validator.ValidationErrors)
-实际上，Struct 方法是调用的 StructCtx 方法
-
-
-*/

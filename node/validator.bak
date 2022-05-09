@@ -1,0 +1,28 @@
+
+Validator 是基于 tag（标记）实现结构体和单个字段的值验证库，它包含以下功能：
+
+使用验证 tag（标记）或自定义验证器进行跨字段和跨结构体验证。
+关于 slice、数组和 map，允许验证多维字段的任何或所有级别。
+能够深入 map 键和值进行验证。
+通过在验证之前确定接口的基础类型来处理类型接口。
+处理自定义字段类型（如 sql 驱动程序 Valuer）。
+别名验证标记，它允许将多个验证映射到单个标记，以便更轻松地定义结构体上的验证。
+提取自定义的字段名称，例如，可以指定在验证时提取 JSON 名称，并在生成的 FieldError 中使用该名称。
+可自定义 i18n 错误消息。
+Web 框架 gin 的默认验证器。
+
+变量验证
+Var 方法使用 tag（标记）验证方式验证单个变量。
+func (*validator.Validate).Var(field interface{}, tag string) error
+它接收一个 interface{} 空接口类型的 field 和一个 string 类型的 tag，返回传递的非法值得无效验证错误，否则将 nil 或 ValidationErrors 作为错误。如果错误不是 nil，则需要断言错误去访问错误数组，例如：
+validationErrors := err.(validator.ValidationErrors)
+如果是验证数组、slice 和 map，可能会包含多个错误。
+
+结构体验证
+结构体验证结构体公开的字段，并自动验证嵌套结构体，除非另有说明。
+func (*validator.Validate).Struct(s interface{}) error
+它接收一个 interface{} 空接口类型的 s，返回传递的非法值得无效验证错误，否则将 nil 或 ValidationErrors 作为错误。如果错误不是 nil，则需要断言错误去访问错误数组，例如：
+validationErrors := err.(validator.ValidationErrors)
+实际上，Struct 方法是调用的 StructCtx 方法
+
+

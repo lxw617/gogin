@@ -3,3 +3,27 @@
 [INFO][tag.go:107]2022/04/27 16:32:41 [createdBy 名称最长不能超过100字符]
 [INFO][tag.go:106]2022/04/27 16:34:01 [createdBy 名称最长不能超过100字符]
 [INFO][tag.go:106]2022/04/27 16:34:38 [createdBy 名称最长不能超过100字符]
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/04/27 - 17:59:12 | 200 |      6.8047ms |             ::1 | GET      "/api/v1/tag/getTags"

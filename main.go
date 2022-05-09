@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"gogin/models"
 	"gogin/pkg/logging"
+	"gogin/pkg/redis"
 	"gogin/pkg/setting"
 	"gogin/routers"
 	"log"
@@ -22,15 +23,20 @@ func init() {
 	setting.Setup()
 	//连接数据库
 	models.Setup()
+	//连接redis
+	gredis.Setup()
 	//日志
 	logging.Setup()
-	//gredis.Setup()
 	//util.Setup()
 }
 
 func main() {
 
 	gin.SetMode(setting.ServerSetting.RunMode)
+
+	gin.DisableConsoleColor()
+
+	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
 	readTimeout := setting.ServerSetting.ReadTimeout

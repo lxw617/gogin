@@ -6,7 +6,7 @@ import (
 	result "gogin/common"
 	"gogin/pkg/logging"
 	"gogin/pkg/util"
-	"gogin/service"
+	"gogin/routers/api/v1/service"
 	"net/http"
 )
 
@@ -38,5 +38,7 @@ func GetToken(c *gin.Context) {
 			}
 			c.JSON(http.StatusOK, result.OK.WithData(token))
 		}
+	} else {
+		c.JSON(http.StatusOK, result.OK.WithMsg("用户名或密码不能为空"))
 	}
 }

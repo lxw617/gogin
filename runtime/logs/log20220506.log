@@ -1,0 +1,771 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 401 with 500
+[GIN] 2022/05/06 - 14:39:35 | 500 |      6.1721ms |             ::1 | GET      "/api/v1/tag/getTags"
+[GIN] 2022/05/06 - 14:39:42 | 200 |            0s |             ::1 | GET      "/auth"
+[GIN] 2022/05/06 - 14:40:09 | 200 |      7.5233ms |             ::1 | GET      "/auth?username=lxw&password=123"
+[GIN] 2022/05/06 - 14:40:28 | 200 |     17.1022ms |             ::1 | GET      "/api/v1/tag/getTags"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 15:36:11 | 200 |       2.566ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 15:37:01 | 200 |   27.5763437s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 15:40:56 | 200 |      2.8916ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- index.html
+	- 
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 15:44:10 | 200 |    9.0043615s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 16:02:36 | 200 |   21.6652581s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 16:06:21 | 200 |    7.5570295s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 16:07:53 | 200 |         1m24s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 16:08:09 | 200 |     9.059342s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 200
+[GIN] 2022/05/06 - 16:11:13 | 200 |      4.8403ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 16:15:10 | 200 |      6.4566ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 16:16:12 | 200 |       3.021ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 16:16:30 | 200 |      3.1983ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- index.html
+	- 
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 401 with 500
+[GIN] 2022/05/06 - 17:44:48 | 500 |      4.0084ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN] 2022/05/06 - 17:44:58 | 200 |     18.2574ms |             ::1 | GET      "/auth?username=lxw&password=123"
+[GIN] 2022/05/06 - 17:45:28 | 200 |   11.7342493s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 17:46:07 | 200 |      3.9711ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 17:56:21 | 200 |      1.5529ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN] 2022/05/06 - 17:57:03 | 200 |   16.2088909s |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 17:58:21 | 200 |      1.4728ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 18:00:39 | 200 |      3.9896ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 18:01:37 | 200 |      1.4978ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 18:02:54 | 200 |      2.4079ms |             ::1 | GET      "/api/v1/tag/getTag/1"
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/upload       --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /api/v1/file/download     --> gogin/middleware/jwt.JWTAuthMiddleware.func1 (3 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- index.html
+	- 
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2022/05/06 - 18:03:23 | 200 |      2.1535ms |             ::1 | GET      "/api/v1/tag/getTag/1"

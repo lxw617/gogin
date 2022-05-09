@@ -2,6 +2,8 @@ package logging
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"io"
 	"log"
 	"os"
 	"path/filepath"
@@ -30,14 +32,19 @@ const (
 )
 
 func Setup() {
-	var err error
+	// Logging to a file.
 	filePath := getLogFilePath()
 	fileName := getLogFileName()
-	//open file
-	F, err = openLogFile(fileName, filePath)
+	f, err := openLogFile(fileName, filePath)
 	if err != nil {
 		log.Fatalln(err)
 	}
+	//打印gin 框架默认的输出内容到日志,如果需要同时将日志写入文件和控制台，请使用以下代码。
+	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+	//如果不需要日志打印到控制台，请使用以下代码
+	//gin.DefaultWriter = io.MultiWriter(f)
+
+	//使用自定义日志格式输出
 	logger = log.New(F, DefaultPrefix, log.LstdFlags)
 }
 
@@ -52,7 +59,7 @@ func Setup() {
 	//上面代码将日志输出到一个bytes.Buffer，然后将这个buf打印到标准输出。
 
 	logger = log.New(F, DefaultPrefix, log.LstdFlags)
-	//log.LstdFlags：日志记录的格式属性之一，其余的选项如下
+	//log.LstdFlags：日志记录的格式属性之一，其余的选项如下 flag可选值 在log包里首先定义了一些常量，它们是日志输出前缀的标识:
 	//const (
 	//	Ldate         = 1 << iota     // the date in the local time zone: 2009/01/23
 	//	Ltime                         // the time in the local time zone: 01:23:23

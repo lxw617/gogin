@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
-	"gogin/controller"
+	"gogin/routers/api/v1/controller"
 	"log"
 	"time"
 
