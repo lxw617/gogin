@@ -2,11 +2,10 @@ package gredis
 
 import (
 	"encoding/json"
+	"gogin/pkg/setting"
 	"time"
 
 	"github.com/gomodule/redigo/redis"
-
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
 )
 
 var RedisPool *redis.Pool
@@ -42,7 +41,7 @@ func Setup() {
 				}
 			}
 			return c, err*/
-			return redis.Dial("tcp", "192.168.10.33:6379")
+			return redis.Dial("tcp", setting.RedisSetting.Host)
 		},
 		TestOnBorrow: func(c redis.Conn, t time.Time) error {
 			_, err := c.Do("PING")
