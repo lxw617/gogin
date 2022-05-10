@@ -30,4 +30,8 @@ func InitApi(group *gin.RouterGroup) {
 	fileGroup.GET("/downloadOSS", controller.DownloadOSS)
 	fileGroup.POST("/testFile", controller.TestFile)
 	fileGroup.DELETE("/deleteOSS", controller.DeleteOSS)
+
+	excalGroup := group.Group("/excel")
+	excalGroup.GET("/importExcel", controller.ImportExcel)
+	excalGroup.GET("/exportExcel", controller.ExportExcel)
 }

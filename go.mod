@@ -14,6 +14,7 @@ require (
 	github.com/robfig/cron v1.2.0
 	github.com/swaggo/gin-swagger v1.4.2
 	github.com/swaggo/swag v1.8.1
+	github.com/tealeg/xlsx v1.0.4-0.20180419195153-f36fa3be8893
 	github.com/unknwon/com v1.0.1
 )
 
