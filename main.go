@@ -31,22 +31,6 @@ func init() {
 }
 func TestGit() {
 	fmt.Println("do you understand?")
-
-	for i := 0; i < 10; i++ {
-		fmt.Println("git 命令")
-	}
-}
-func TestGit2() {
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	fmt.Println("测试git22222")
-	for i := 0; i < 10; i++ {
-		fmt.Println("git 命令")
-	}
 }
 func main() {
 
@@ -54,7 +38,6 @@ func main() {
 
 	gin.DisableConsoleColor()
 	TestGit()
-	TestGit2()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
