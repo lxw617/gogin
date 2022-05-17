@@ -29,13 +29,17 @@ func init() {
 	logging.Setup()
 	//util.Setup()
 }
-
+func TestGit() {
+	for i := 0; i < 10; i++ {
+		fmt.Println("git 命令")
+	}
+}
 func main() {
 
 	gin.SetMode(setting.ServerSetting.RunMode)
 
 	gin.DisableConsoleColor()
-
+	TestGit()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
