@@ -31,6 +31,10 @@ func init() {
 }
 func TestGit() {
 	fmt.Println("do you understand?")
+
+	for i := 0; i < 10; i++ {
+		fmt.Println("git 命令")
+	}
 }
 func main() {
 
