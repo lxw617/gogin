@@ -33,6 +33,12 @@ func TestGit() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("git 命令")
 	}
+	fmt.Println("测试git")
+	fmt.Println("测试git")
+	fmt.Println("测试git")
+	fmt.Println("测试git")
+	fmt.Println("测试git")
+	fmt.Println("测试git")
 }
 func main() {
 
