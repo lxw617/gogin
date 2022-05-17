@@ -54,7 +54,6 @@ func main() {
 
 	gin.DisableConsoleColor()
 	TestGit()
-	TestGit2()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
