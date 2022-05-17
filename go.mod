@@ -3,6 +3,7 @@ module gogin
 go 1.18
 
 require (
+	github.com/EDDYCJY/go-gin-example v0.0.0-20201228125222-28f372bf41f9
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.2+incompatible
 	github.com/astaxie/beego v1.12.3
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
@@ -15,6 +16,7 @@ require (
 	github.com/swaggo/swag v1.8.1
 	github.com/tealeg/xlsx v1.0.4-0.20180419195153-f36fa3be8893
 	github.com/unknwon/com v1.0.1
+	github.com/xuri/excelize/v2 v2.6.0
 )
 
 require (
@@ -48,7 +50,6 @@ require (
 	github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	github.com/xuri/efp v0.0.0-20220407160117-ad0f7a785be8 // indirect
-	github.com/xuri/excelize/v2 v2.6.0 // indirect
 	github.com/xuri/nfp v0.0.0-20220409054826-5e722a1d9e22 // indirect
 	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4 // indirect
 	golang.org/x/net v0.0.0-20220412020605-290c469a71a5 // indirect
