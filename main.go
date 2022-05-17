@@ -30,12 +30,7 @@ func init() {
 	//util.Setup()
 }
 func TestGit() {
-	fmt.Println("测试git")
-	fmt.Println("测试git")
-	fmt.Println("测试git")
-	fmt.Println("测试git")
-	fmt.Println("测试git")
-	fmt.Println("测试git")
+	fmt.Println("do you understand?")
 }
 func TestGit2() {
 	fmt.Println("测试git22222")
