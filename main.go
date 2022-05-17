@@ -48,6 +48,9 @@ func TestGit2() {
 	fmt.Println("测试git22222")
 	fmt.Println("测试git22222")
 	fmt.Println("测试git22222")
+	for i := 0; i < 10; i++ {
+		fmt.Println("git 命令")
+	}
 }
 func main() {
 
