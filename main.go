@@ -40,12 +40,22 @@ func TestGit() {
 	fmt.Println("测试git")
 	fmt.Println("测试git")
 }
+func TestGit2() {
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+	fmt.Println("测试git22222")
+}
 func main() {
 
 	gin.SetMode(setting.ServerSetting.RunMode)
 
 	gin.DisableConsoleColor()
 	TestGit()
+	TestGit2()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
