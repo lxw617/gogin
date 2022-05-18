@@ -59,6 +59,7 @@ func main() {
 	Test02()
 	TestGit()
 	TestGit2()
+	rebase()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
@@ -78,4 +79,7 @@ func main() {
 	log.Printf("[info] start http server listening %s", endPoint)
 
 	server.ListenAndServe()
+}
+func rebase() {
+	fmt.Println("rebase...")
 }
