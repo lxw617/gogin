@@ -60,6 +60,7 @@ func main() {
 	TestGit()
 	TestGit2()
 	rebase()
+	sleep()
 	fmt.Println("air running...")
 
 	routersInit := routers.InitRouter()
@@ -82,4 +83,7 @@ func main() {
 }
 func rebase() {
 	fmt.Println("rebase...")
+}
+func sleep() {
+	fmt.Println("sleep...")
 }
