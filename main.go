@@ -29,6 +29,10 @@ func init() {
 	logging.Setup()
 	//util.Setup()
 }
+
+func Test02() {
+	fmt.Println("test 02")
+}
 func TestGit() {
 	fmt.Println("测试git")
 	fmt.Println("测试git")
@@ -51,6 +55,8 @@ func main() {
 	gin.SetMode(setting.ServerSetting.RunMode)
 
 	gin.DisableConsoleColor()
+
+	Test02()
 	TestGit()
 	TestGit2()
 	fmt.Println("air running...")
