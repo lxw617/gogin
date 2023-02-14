@@ -32,11 +32,11 @@ go run main.go
 
 - https://github.com/gin-gonic/gin
 
-- https://github.com/kardianos/govendor（依赖包管理工具），参考链接：https://blog.csdn.net/bandaoyu/article/details/126414230
+- https://github.com/kardianos/govendor （依赖包管理工具），参考链接： https://blog.csdn.net/bandaoyu/article/details/126414230
 
-- https://github.com/go-ini/ini（配置文件），https://ini.unknwon.io/（中文文档）
+- https://github.com/go-ini/ini （配置文件）， https://ini.unknwon.io/ （中文文档）
 
-- https://github.com/Unknwon/com（工具包）
+- https://github.com/Unknwon/com （工具包）
 
 - https://github.com/jinzhu/gorm
 
@@ -46,18 +46,18 @@ go run main.go
 
 - https://github.com/astaxie/beego/tree/master/validation （beego的表单验证库）
 
-- https://github.com/dgrijalva/jwt-go（身份验证）
+- https://github.com/dgrijalva/jwt-go （身份验证）
 
-- https://github.com/swaggo/swag（swag 文档）
+- https://github.com/swaggo/swag （swag 文档）
 
-- https://github.com/fvbock/endless（优雅关闭）
+- https://github.com/fvbock/endless （优雅关闭）
 
-- https://github.com/robfig/cron（定时器）
+- https://github.com/robfig/cron （定时器）
 
-- https://github.com/tealeg/xlsx，https://github.com/qax-os/excelize
+- https://github.com/tealeg/xlsx， https://github.com/qax-os/excelize
 
-- https://github.com/boombuler/barcode（二维码）
+- https://github.com/boombuler/barcode （二维码）
 
-- https://github.com/golang/freetype（图片绘制）
+- https://github.com/golang/freetype （图片绘制）
 
   
