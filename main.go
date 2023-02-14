@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"gogin/models"
 	"gogin/pkg/logging"
-	"gogin/pkg/redis"
+	gredis "gogin/pkg/redis"
 	"gogin/pkg/setting"
 	"gogin/routers"
 	"log"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func init() {

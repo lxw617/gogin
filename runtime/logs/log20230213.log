@@ -1,0 +1,136 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/routers/api/v1/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/routers/api/v1/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/routers/api/v1/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/routers/api/v1/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/routers/api/v1/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/routers/api/v1/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/uploadOSS    --> gogin/routers/api/v1/controller.UploadOSS (4 handlers)
+[GIN-debug] GET    /api/v1/file/downloadOSS  --> gogin/routers/api/v1/controller.DownloadOSS (4 handlers)
+[GIN-debug] POST   /api/v1/file/testFile     --> gogin/routers/api/v1/controller.TestFile (4 handlers)
+[GIN-debug] DELETE /api/v1/file/deleteOSS    --> gogin/routers/api/v1/controller.DeleteOSS (4 handlers)
+[GIN-debug] GET    /api/v1/excel/importExcel --> gogin/routers/api/v1/controller.ImportExcel (4 handlers)
+[GIN-debug] GET    /api/v1/excel/exportExcel --> gogin/routers/api/v1/controller.ExportExcel (4 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/routers/api/v1/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/routers/api/v1/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/routers/api/v1/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/routers/api/v1/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/routers/api/v1/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/routers/api/v1/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/uploadOSS    --> gogin/routers/api/v1/controller.UploadOSS (4 handlers)
+[GIN-debug] GET    /api/v1/file/downloadOSS  --> gogin/routers/api/v1/controller.DownloadOSS (4 handlers)
+[GIN-debug] POST   /api/v1/file/testFile     --> gogin/routers/api/v1/controller.TestFile (4 handlers)
+[GIN-debug] DELETE /api/v1/file/deleteOSS    --> gogin/routers/api/v1/controller.DeleteOSS (4 handlers)
+[GIN-debug] GET    /api/v1/excel/importExcel --> gogin/routers/api/v1/controller.ImportExcel (4 handlers)
+[GIN-debug] GET    /api/v1/excel/exportExcel --> gogin/routers/api/v1/controller.ExportExcel (4 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/routers/api/v1/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/routers/api/v1/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/routers/api/v1/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/routers/api/v1/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/routers/api/v1/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/routers/api/v1/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/uploadOSS    --> gogin/routers/api/v1/controller.UploadOSS (4 handlers)
+[GIN-debug] GET    /api/v1/file/downloadOSS  --> gogin/routers/api/v1/controller.DownloadOSS (4 handlers)
+[GIN-debug] POST   /api/v1/file/testFile     --> gogin/routers/api/v1/controller.TestFile (4 handlers)
+[GIN-debug] DELETE /api/v1/file/deleteOSS    --> gogin/routers/api/v1/controller.DeleteOSS (4 handlers)
+[GIN-debug] GET    /api/v1/excel/importExcel --> gogin/routers/api/v1/controller.ImportExcel (4 handlers)
+[GIN-debug] GET    /api/v1/excel/exportExcel --> gogin/routers/api/v1/controller.ExportExcel (4 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/routers/api/v1/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/routers/api/v1/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/routers/api/v1/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/routers/api/v1/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/routers/api/v1/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/routers/api/v1/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/uploadOSS    --> gogin/routers/api/v1/controller.UploadOSS (4 handlers)
+[GIN-debug] GET    /api/v1/file/downloadOSS  --> gogin/routers/api/v1/controller.DownloadOSS (4 handlers)
+[GIN-debug] POST   /api/v1/file/testFile     --> gogin/routers/api/v1/controller.TestFile (4 handlers)
+[GIN-debug] DELETE /api/v1/file/deleteOSS    --> gogin/routers/api/v1/controller.DeleteOSS (4 handlers)
+[GIN-debug] GET    /api/v1/excel/importExcel --> gogin/routers/api/v1/controller.ImportExcel (4 handlers)
+[GIN-debug] GET    /api/v1/excel/exportExcel --> gogin/routers/api/v1/controller.ExportExcel (4 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> gogin/routers.InitRouter.func1 (3 handlers)
+[GIN-debug] POST   /user/:name/*action       --> gogin/routers.InitRouter.func2 (3 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[GIN-debug] GET    /auth                     --> gogin/routers/api/v1/controller.GetToken (3 handlers)
+[GIN-debug] GET    /api/v1/tag/getTags       --> gogin/routers/api/v1/controller.GetTags (4 handlers)
+[GIN-debug] GET    /api/v1/tag/getTag/:id    --> gogin/routers/api/v1/controller.GetTagById (4 handlers)
+[GIN-debug] POST   /api/v1/tag/addTag        --> gogin/routers/api/v1/controller.AddTag (4 handlers)
+[GIN-debug] PUT    /api/v1/tag/updateTag/:id --> gogin/routers/api/v1/controller.EditTag (4 handlers)
+[GIN-debug] DELETE /api/v1/tag/delTag/:id    --> gogin/routers/api/v1/controller.RemoveTag (4 handlers)
+[GIN-debug] POST   /api/v1/file/uploadOSS    --> gogin/routers/api/v1/controller.UploadOSS (4 handlers)
+[GIN-debug] GET    /api/v1/file/downloadOSS  --> gogin/routers/api/v1/controller.DownloadOSS (4 handlers)
+[GIN-debug] POST   /api/v1/file/testFile     --> gogin/routers/api/v1/controller.TestFile (4 handlers)
+[GIN-debug] DELETE /api/v1/file/deleteOSS    --> gogin/routers/api/v1/controller.DeleteOSS (4 handlers)
+[GIN-debug] GET    /api/v1/excel/importExcel --> gogin/routers/api/v1/controller.ImportExcel (4 handlers)
+[GIN-debug] GET    /api/v1/excel/exportExcel --> gogin/routers/api/v1/controller.ExportExcel (4 handlers)
+[GIN-debug] GET    /baidu                    --> gogin/routers.InitRouter.func3 (3 handlers)
+[GIN-debug] GET    /long_async               --> gogin/routers.InitRouter.func4 (3 handlers)
+[GIN-debug] GET    /long_sync                --> gogin/routers.InitRouter.func5 (3 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
+[GIN-debug] GET    /index                    --> gogin/routers.InitRouter.func7 (3 handlers)
+[GIN] 2023/02/13 - 12:26:19 | 200 |       645.7µs |             ::1 | GET      "/test"
